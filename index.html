@@ -467,48 +467,48 @@
         <div class="footer-contact">
           <p class="footer-sub">Subscribe</p>
           <form class="footer-form">
-            <input
-              type="email"
-              name="email-user"
-              class="footer-email"
-              placeholder="E-mail"
-            />
+            <label class="form-label">
+              <input
+                type="email"
+                name="email-user"
+                class="footer-email"
+                placeholder="E-mail"
+              />
+            </label>
             <button class="footer-sub-btn" type="submit">
               Subscribe
-              <div class="footer-icn-div">
-                <svg class="teleg-icon">
-                  <use href="./images/icons.svg#icon-icon-send"></use>
-                </svg>
-              </div>
+              <svg class="teleg-icon">
+                <use href="./images/icons.svg#icon-icon-send"></use>
+              </svg>
             </button>
           </form>
         </div>
       </div>
     </footer>
-    <div class="modal is-closed">
+    <div class="modal is-open">
       <div class="modal-content">
-        <div class="close-btn">
+        <button type="button" class="close-btn">
           <svg class="close-icon">
             <use href="./images/icons.svg#icon-Vector"></use>
           </svg>
-        </div>
+        </button>
         <p class="modal-header">
           Leave your contacts and we will call you back
         </p>
         <form class="modal-form">
           <div class="name-div">
-            <label for="username" class="form-label">Name</label>
+            <label for="user-name" class="form-label">Name</label>
             <div class="icon-div">
+              <input
+                type="text"
+                class="modal-name"
+                id="user-name"
+                name="user-name"
+              />
               <svg class="input-icon name">
                 <use href="./images/icons.svg#icon-Vector-1"></use>
               </svg>
             </div>
-            <input
-              type="text"
-              class="modal-name"
-              id="username"
-              name="user-name"
-            />
           </div>
           <div class="name-div">
             <label for="usertel" class="form-label">Phone</label>
@@ -516,8 +516,14 @@
               <svg class="input-icon phone">
                 <use href="./images/icons.svg#icon-Vector-2"></use>
               </svg>
+
+              <input
+                type="tel"
+                class="modal-name"
+                id="usertel"
+                name="user-tel"
+              />
             </div>
-            <input type="tel" class="modal-name" id="usertel" name="user-tel" />
           </div>
           <div class="name-div">
             <label for="useremail" class="form-label">Email</label>
@@ -525,42 +531,43 @@
               <svg class="input-icon email">
                 <use href="./images/icons.svg#icon-Vector-3"></use>
               </svg>
+              <input
+                type="email"
+                class="modal-name"
+                id="useremail"
+                name="user-email"
+              />
             </div>
-            <input
-              type="email"
-              class="modal-name"
-              id="useremail"
-              name="user-email"
-            />
           </div>
-          <div class="name-div">
-            <label for="usercomment" class="form-label">Comment</label>
+          <div class="name-div com">
+            <label for="user-comment" class="form-label">Comment</label>
             <textarea
               type="textarea"
               rows="5"
               class="modal-textarea"
-              id="usercomment"
+              id="user-comment"
+              name="user-comment"
               placeholder="Text input"
             ></textarea>
           </div>
-          <label class="licence">
+          <div class="licence">
             <input
               type="checkbox"
-              value="accepted"
-              id="license"
-              name="agreed"
-              class="hidden-check"
+              value="true"
+              id="user-privacy"
+              name="user-privacy"
+              class="visually-hidden check"
             />
-            <div class="agreed-div">
-              <svg class="agreed-svg">
-                <use href="./images/icons.svg#icon-Vector-4"></use>
-              </svg>
-            </div>
-            <label for="license" class="licence-label"
-              >I accept the terms and conditions of the
-              <span class="policy">Privacy Policy</span></label
-            >
-          </label>
+            <label for="user-privacy" class="licence-label">
+              <span class="agreed-div">
+                <svg class="agreed-svg">
+                  <use href="./images/icons.svg#icon-Vector-4"></use>
+                </svg>
+              </span>
+              I accept the terms and conditions of the
+              <a href="" class="policy">Privacy Policy</a>
+            </label>
+          </div>
           <button type="submit" class="sub-btn">Send</button>
         </form>
       </div>
