@@ -624,6 +624,7 @@ img {
 .agreed-div {
   width: 16px;
   height: 16px;
+  margin-right: 8px;
   border: 1px solid rgba(46, 47, 66, 0.4);
   border-radius: 2px;
   display: inline-flex;
@@ -633,14 +634,17 @@ img {
   transition: background-color 250ms cubic-bezier(0.4, 0, 0.2, 1);
 }
 .agreed-svg {
-  fill: transparent;
   width: 10px;
   height: 8px;
+  fill: transparent;
 }
-.visually-hidden.check:checked + .agreed-div {
+.visually-hidden.check:checked + .licence-label .agreed-div {
   border: none;
   fill: #f4f4fd;
   background-color: #404bbf;
+}
+.visually-hidden.check:checked + .licence-label .agreed-svg {
+  fill: #f4f4fd;
 }
 .sub-btn {
   background-color: #4d5ae5;
